@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://gk6c8pgeuihp"]
+
+[ext_resource type="Texture2D" uid="uid://cf5flmb5ulbvn" path="res://textures/object_tiles/key.png" id="1_1hjej"]
+[ext_resource type="Script" path="res://scripts/door_key.gd" id="1_72iq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsl22"]
+size = Vector2(4.5, 11)
+
+[node name="DoorKey" type="Area2D" groups=["key"]]
+script = ExtResource("1_72iq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1hjej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_xsl22")
