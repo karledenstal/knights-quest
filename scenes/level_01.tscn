@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://l01vgo0n1fsu"]
+[gd_scene load_steps=7 format=4 uid="uid://l01vgo0n1fsu"]
 
 [ext_resource type="PackedScene" uid="uid://l8ol3ha7imbo" path="res://scenes/player.tscn" id="1_p5wsv"]
 [ext_resource type="Script" path="res://scripts/level_01.gd" id="1_t0cur"]
-[ext_resource type="PackedScene" uid="uid://b6w2othfljnc4" path="res://scenes/background.tscn" id="2_eg572"]
 [ext_resource type="PackedScene" uid="uid://bfk5d4al5nrpn" path="res://scenes/tile_map_layer.tscn" id="2_m2sqe"]
 [ext_resource type="PackedScene" uid="uid://liy26vyq7o87" path="res://scenes/coin.tscn" id="3_idm3p"]
 [ext_resource type="PackedScene" uid="uid://dmj1jik5lctfc" path="res://scenes/heart.tscn" id="5_u78ec"]
@@ -11,20 +10,18 @@
 [node name="Level01" type="Node2D"]
 script = ExtResource("1_t0cur")
 
-[node name="Background" parent="." instance=ExtResource("2_eg572")]
-
 [node name="Player" parent="." instance=ExtResource("1_p5wsv")]
 position = Vector2(321, 140)
 
-[node name="Coins" type="Node" parent="."]
+[node name="Objects" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("3_idm3p")]
+[node name="Coin" parent="Objects" instance=ExtResource("3_idm3p")]
 position = Vector2(471, 183)
 
-[node name="Coin2" parent="Coins" instance=ExtResource("3_idm3p")]
+[node name="Coin2" parent="Objects" instance=ExtResource("3_idm3p")]
 position = Vector2(202, 168)
 
-[node name="Heart" parent="." instance=ExtResource("5_u78ec")]
+[node name="Heart" parent="Objects" instance=ExtResource("5_u78ec")]
 position = Vector2(104, 184)
 
 [node name="DoorKey" parent="." instance=ExtResource("6_helxc")]
